@@ -1,0 +1,235 @@
+$(document).ready(function() {
+    /* ----------------------- Peremenneen ----------------------- */
+    var menuItem = $("nav").find("li");
+    var cities = $(".cities");
+    var city = ""; //kovert chidoward 
+    var listItem = $(".bookInputBoxes").find("ul").find("li");
+    var passIncrementer = $(".passengerBlocks").find("input:nth-child(3)");
+    var passDecrementer = $(".passengerBlocks").find("input:nth-child(4)");
+    var adultQuantity = $("#adultBlock").find("input[type='text']");
+    var childQuantity = $("#childBlock").find("input[type='text']");
+    var infantQuantity = $("#infantBlock").find("input[type='text']");
+    var infantPlusQuantity = $("#infantBlockPlus").find("input[type='text']");
+    var maxSegments = 15; //passazhiren katigoriya ogranichet chidoward
+    var segments = maxSegments - 1; //cond passazhir zehtow boft
+
+    /* ------------------------ Znacheneen ----------------------------- */
+    $(cities).val("");
+    adultQuantity.val("1");
+    childQuantity.val("");
+    infantQuantity.val("");
+    infantPlusQuantity.val("");
+    $("#dateOfDeparture").val("");
+    $("#dateOfArrival").val("");
+    dateInputWidth = $(".bookInputBoxes").width();
+    $(".lvl2").hide();
+    $(window).resize(function() {
+        winWidth = $(window).width();
+    })
+
+    $("#news").find(".newsCol:nth-child(2)").removeClass("leftCol");
+    $("#news").find(".newsCol:nth-child(2)").addClass("rightCol");
+
+    /* ------------------------ Tar ICAO convert chidow ---------------- */
+    function ICAO(city) {
+        var icaovalue;
+        switch (city.toLowerCase()) {
+            case "almaty":
+                icaovalue = "ALA";
+                break;
+            case "samarqand":
+                icaovalue = "SKD";
+                break;
+            case "bishkek":
+                icaovalue = "FRU";
+                break;
+            case "vanj":
+                icaovalue = "VNC";
+                break;
+            case "delhi":
+                icaovalue = "DEL";
+                break;
+            case "dushanbe":
+                icaovalue = "DYU";
+                break;
+            case "ekaterinburg":
+                icaovalue = "SVX";
+                break;
+            case "irkutsk":
+                icaovalue = "IKT";
+                break;
+            case "moscow":
+                icaovalue = "MOW";
+                break;
+            case "novosibirsk":
+                icaovalue = "OVB";
+                break;
+            case "samara":
+                icaovalue = "KUF";
+                break;
+            case "st. Petersburg":
+                icaovalue = "LED";
+                break;
+            case "surgut":
+                icaovalue = "SGC";
+                break;
+            case "beijing":
+                icaovalue = "BJS";
+                break;
+            case "tehran":
+                icaovalue = "THR";
+                break;
+            case "urumqi":
+                icaovalue = "URC";
+                break;
+            case "khujand":
+                icaovalue = "LBD";
+                break;
+            case "chelyabinsk":
+                icaovalue = "DYU";
+                break;
+        }
+        return icaovalue;
+    }
+
+    /* ------------------------ Garizantalne menu ---------------------- */
+    $(menuItem).on("mouseleave", function() {
+        $(this).find(".lvl2").stop(true, true).slideUp("fast");
+    })
+    $(menuItem).on("mouseover", function(e) {
+        e.preventDefault();
+        e.stopPropagation();
+        $(this).find(".lvl2").slideDown("fast");
+    })
+
+
+
+    /* ------------------------ Zhakchin knopka klass ------------------ */
+    $("#flight").addClass("selectedBookingButtons");
+    var catSelBtn = $("#categorySelect").find("p");
+    $(catSelBtn).on("click", function() {
+        if (!$(this).hasClass("selectedBookingButtons")) {
+            $(catSelBtn).removeClass("selectedBookingButtons");
+            $(this).addClass("selectedBookingButtons");
+        }
+    })
+
+    /* --------------------------------- Haaren -------------------------- */
+    $(cities)
+        .change(function() {
+            var filter = $(this).val().toLowerCase();
+            $(this).parent().find("ul")
+                .find("li:not(:Contains(" + filter + "))").slideUp("fast");
+            $(this).parent().find("ul")
+                .find("li:Contains(" + filter + ")").slideDown("fast");
+            return false;
+        })
+        .keyup(function() {
+            $(this).change();
+        })
+        .click(function(b) {
+            b.stopPropagation();
+            $(listItem).not($(this).parent().find("ul").find("li")).slideUp("fast");
+            $(this).parent().find("ul").find("li").slideDown("fast");
+        })
+
+    $(listItem).click(function(e) {
+        e.stopPropagation();
+        $(this).parent().parent().find("input").val($(this).text()).css({ "text-transform": "capitalize" });
+        $(this).parent().find("li").slideUp("fast");
+    })
+
+    $("html").on("click", function() {
+        $(listItem).slideUp("fast");
+    })
+
+    /* ------------------------ Dzuliken svich wezevam------------------ */
+    $("#childrenSwitch").find("input").prop("checked", false);
+    $("#childrenSwitch").on("click", function() {
+        if ($(this).find("input").is(":checked")) {
+            $(".childrenContainer").slideDown("fast");
+        } else {
+            $(".childrenContainer").slideUp("fast");
+        }
+    })
+
+    /* ----------------------------------- Ruzen ------------------------- */
+
+    $(".dates").pickadate({
+        format: 'dddd, mmmm d, yyyy',
+        formatSubmit: 'dd.mm.yyyy',
+        hiddenName: true,
+        firstDay: 1,
+        min: true,
+        max: false,
+        today: 'Today',
+        clear: 'Clear',
+        close: 'Close',
+    });
+
+    /* -------------------------------- lap chidow ----------------------- */
+    function Increment(a) {
+        var currentInput = a.find("input[type='text']");
+        if (segments != 0) {
+            if (a.attr("id") == "infantBlock" && currentInput.val() == adultQuantity.val()) {
+                alert("The number of Infants cannot be more than the number of Adults.");
+                return currentInput.val();
+            } else {
+                currentInput.val(+currentInput.val() + 1);
+                segments -= 1;
+                console.log(currentInput.val() + " ------ " + segments);
+                return currentInput.val();
+            }
+        }
+        return currentInput.val();
+    }
+
+
+    /* ---------------------------------- Kam chidow -------------------- */
+    function Decrement(a) {
+        var currentInput = a.find("input[type='text']");
+        if (segments != maxSegments && currentInput.val() != 0) {
+            if (a.attr("id") == "adultBlock" && adultQuantity.val() == infantQuantity.val()) {
+                alert("Adult passengers should not be less then infant passengers.");
+                return currentInput.val();
+            } else if (a.attr("id") == "adultBlock" && adultQuantity.val() == 1) {
+                alert("At least one adult passenger should be selected.");
+                return currentInput.val();
+            } else {
+                currentInput.val(+currentInput.val() - 1);
+                segments += 1;
+                console.log(currentInput.val() + " ------ " + segments);
+                return currentInput.val();
+            }
+        } else {
+            return currentInput.val();
+        }
+    }
+
+
+    /* ---------------------------- Lapchidat kamchid knopkaen ------------ */
+    $(passIncrementer).on("click", function() {
+        var currInp = $(this).parent();
+        currInp.find("input[type='text']").val(Increment(currInp));
+    })
+    $(passDecrementer).on("click", function() {
+        var currInp = $(this).parent();
+        currInp.find("input[type='text']").val(Decrement(currInp));
+    })
+    $("#searchButton").on("click", function() {
+
+    })
+    $("#bookingForm").submit(function() {
+        $("#ocitycode").val(ICAO($("#ocitycode").parent().find(".cities").val()));
+        $("#dcitycode").val(ICAO($("#dcitycode").parent().find(".cities").val()));
+        if ($("#dateOfArrival").val() !== "") {
+            $("[name='segmentsCount']").val(2);
+            $("#ocitycode1").val() == $("#dcitycode").val();
+            $("#dcitycode1").val() == $("#ocitycode").val();
+        } else {
+            $("[name='segmentsCount']").val(1);
+            $("#ocitycode1").val("");
+            $("#dcitycode1").val("");
+        }
+    })
+})

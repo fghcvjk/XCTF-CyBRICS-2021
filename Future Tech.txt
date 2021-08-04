@@ -1,0 +1,8 @@
+ Future Tech (Network, Medium, 444 pts)
+
+Author: Vlad Roskov (@mrvos)
+
+Welcome to CyBRICS CTF Millenium Edition Year 3000
+
+Your flag is at
+http3+dccp+ipv6://futuretech-cybrics2021.ctf.su/

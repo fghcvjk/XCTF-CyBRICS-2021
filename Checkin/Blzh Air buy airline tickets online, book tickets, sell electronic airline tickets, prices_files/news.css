@@ -1,0 +1,163 @@
+#news {
+	position: relative;
+	-o-display: flex;
+	-moz-display: flex;
+	-webkit-display: flex;
+	display: flex;
+	font-weight: 100;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	margin-top: 20px;
+	box-sizing: border-box;
+}
+.newsCol {
+	-o-display: flex;
+	-moz-display: flex;
+	-webkit-display: flex;
+	display: flex;
+	text-align: justify;
+	hyphens: auto;
+	line-height: 1.5;
+	justify-content: space-around;
+	overflow: hidden;
+}
+.newsCol aside {
+	width: 42%;
+	max-height: 180px;
+	overflow: hidden;
+	min-width: 240px;
+	flex-basis: 280px;
+	flex-shrink: 1;
+	margin: 0px 5px;
+}
+.newsCol article{
+	flex-shrink: 1;
+	max-width: 330px;
+}
+.newsCol img {
+}
+.leftCol {
+	flex: 1;
+	flex-grow: 1;
+	flex-shrink: 1;
+	height: auto;
+	justify-content: space-around;
+	background-color: #fff;
+}
+.rightCol {
+	flex: 1;
+	flex-grow: 1;
+	flex-shrink: 1;
+	height: auto;
+	justify-content: space-around;
+	flex-direction: row-reverse;
+	background-color: #fff;
+}
+.newsCol p {
+	font-size: 13px;
+	font-weight: 100;
+	color: #000;
+	flex-shrink: 1;
+}
+.newsCol small {
+	color: red;
+	font-size: 80%;
+}
+.newsCol h2 {
+	font-size: 18px;
+	line-height: 1.3;
+	font-weight: 100;
+	font-family: "Myriad Pro", Myriad, "Liberation Sans", "Nimbus Sans L", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	display: block;
+	text-align: left;
+	color: #000;
+}
+.newsCol aside>a {
+	position: absolute;
+	display: block;
+	font-style: italic;
+	color: red;
+	text-decoration: underline;
+	bottom: 0px;
+}
+.newsCol aside h2>a {
+	font-size: 18px;
+	line-height: 1.3;
+	font-weight: 100;
+	font-family: "Myriad Pro", Myriad, "Liberation Sans", "Nimbus Sans L", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	display: block;
+	text-align: left;
+	margin-bottom: 5%;
+	color: #000;
+	text-decoration: none;
+}
+
+
+div.news-list
+{
+	word-wrap: break-word;
+	font-family: Helvetica Neue,Helvetica,Arial,sans-serif;
+}
+.news-item #NewsTitle
+{
+	display: block;
+	font-size: 14px;
+	text-transform: uppercase;
+	color: #333333;
+	text-decoration: none;
+	font-weight: 600;
+	line-height: 1.2;
+	padding: 10px 0px 0px 0px;
+	margin-bottom: -10px;
+}
+.news-item 
+{
+	position: relative;
+	border: 1px solid #eeeeee;
+	border-radius: 5px;
+	background-color: #fefefe;
+	height: 159px;
+	padding: 0px 10px 0px 0px;
+	margin: 10px 0px;
+	font-size: 14px;
+	color: #333333;
+	overflow: hidden;
+}
+span.news-date-time
+{
+	position: absolute;
+	bottom: 10px;
+	right: 10px;
+	font-size: 12px;
+	color: #ff0000;
+}
+div.news-list img.preview_picture
+{
+	float:left;
+	margin:0 4px 6px 0;
+	/*width: 240px;
+	height: 159px;*/
+	margin-right: 20px;
+}
+#detailPageNews {
+	padding: 0px;
+	border: none;
+}
+#detailPageNews h2, #detailPageNews p, #detailPageNews small {
+	padding: 0px;
+	margin: 0px;
+}
+#detailPageNews h2 {
+	font-weight: 400;
+	font-size: 20px;
+	margin-top: 40px;
+	margin-bottom: 10px;
+	text-align: justify;
+}
+#detailPageNews p {
+	line-height: 1.5;
+	font-size: 16px;
+	color: #111;
+	font-weight: 300;
+	text-align: justify;
+}

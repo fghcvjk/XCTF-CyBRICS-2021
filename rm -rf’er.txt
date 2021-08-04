@@ -1,0 +1,12 @@
+ rm -rf’er (CTB, Baby, 166 pts)
+
+Author: Vlad Roskov (@mrvos)
+
+Alarm! We accidentally did rm -rf /* on a very important server. Now all that’s left is one shell session.
+
+ssh rmrfer@178.154.210.26
+Password: sa7Neiyi
+
+Rescue the flag.txt file from one of the directories by only using your shell
+
+Added at 13:45 — frequent question: yes, if you found flag.txt, the flag is right there, in the open, as plain text. Just read it. If you’re not seeing the flag, try to find another method that will not hide info from you

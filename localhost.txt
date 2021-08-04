@@ -1,0 +1,23 @@
+ localhost (Network, Hard, 267 pts)
+
+Author: Vlad Roskov (@mrvos)
+
+Remember NET fleeks? I’ve pwned a box in another corporate network, and there is some peculiarly configured server near my foothold. Take a look.
+
+ssh localhost@109.233.61.10
+Password: ohx7eeQu
+Your team token > zZNY-7LALBStgmUZaG4bAQ
+
+root@ubuntu:~# ssh localhost@109.233.61.10
+The authenticity of host '109.233.61.10 (109.233.61.10)' can't be established.
+ECDSA key fingerprint is SHA256:d69e9wJvTQBQbxr8SLkTOtMTwFLXRbOeSyNpFKynxQs.
+Are you sure you want to continue connecting (yes/no)? yes
+Warning: Permanently added '109.233.61.10' (ECDSA) to the list of known hosts.
+localhost@109.233.61.10's password:
+Your team token > zZNY-7LALBStgmUZaG4bAQ
+Welcome, Team # 41
+Setting up your environment (5 sec without heavy load)...
+
+root@PWNED:~# ls
+nmap-7.80  nmap-7.80.tgz
+root@PWNED:~#

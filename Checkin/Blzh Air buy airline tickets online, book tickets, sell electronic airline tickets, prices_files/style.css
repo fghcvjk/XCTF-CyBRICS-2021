@@ -1,0 +1,63 @@
+/* Yi reset kinam */
+* {
+	padding: 0px;
+	margin: 0px;
+	border: none;
+	font-family: Helvetica Neue,Helvetica,Arial,sans-serif;
+	font-style: normal;
+	font-variant: normal;
+	#font-weight: 100;
+	transition:all .3s ease-in-out;
+ 	o-transition: all .3s ease-in-out;
+	-moz-transition:all .3s ease-in-out;
+	-webkit-transition:all .3s ease-in-out; 
+	-moz-tap-highlight-color: rgba(0,0,0,0);
+	-o-tap-highlight-color: rgba(0,0,0,0);
+	-webkit-tap-highlight-color: rgba(0,0,0,0);
+	tap-highlight-color: rgba(0,0,0,0);
+
+}
+/* fuk suratenard obshi pravila */
+img {
+	max-width: 100%;
+	width: auto;
+	height: auto;
+	margin-bottom: -4px;
+	border: none;
+}
+body * {
+	-webkit-tap-highlight-color: rgba(0,0,0,0);
+	-o-tap-highlight-color: rgba(0,0,0,0);
+	-moz-tap-highlight-color: rgba(0,0,0,0);
+	tap-highlight-color: rgba(0,0,0,0);
+}
+body a {
+	outline: 0;
+}
+body {
+	min-width: 320px;
+	max-width: 1366;
+	background-color: #eeeeee;
+	background-image: url(../img/tile_bl.jpg);
+}
+body a {
+	outline: 0;
+}
+#tmpl_en_sp_workarea {
+	max-width: 1000px;
+	margin: 40px auto;
+	padding: 30px 3%;
+	box-sizing: border-box;
+	background-color: #ffffff;
+	font-family: Helvetica Neue,Helvetica,Arial,sans-serif;
+	font-style: normal;
+	font-variant: normal;
+	text-align: justify;
+	overflow-wrap: break-word;
+	line-height: 1.5;
+	color: #111;
+	border-top: 30px solid #3A505E;
+	border-bottom: 5px solid #3A505E;
+	border-radius: 1px;
+	background-color: #fefefe;
+}

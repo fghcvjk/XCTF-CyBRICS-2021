@@ -1,0 +1,34 @@
+$(document).ready(function() {
+var vMenu = $("nav").find("ul");
+/* ------------------------- ekran razmer bidal chidow te ------------------------------ */
+	function chidomKalendar(width) {
+		width = parseInt(width);
+		if(width>950) {
+			$("#calendarTypeStyle").attr("href", "/bitrix/templates/EN_MAIN/css/desktop/calendar.classic.css");
+			$("#calendarVarStyle").attr("href", "/bitrix/templates/EN_MAIN/css/desktop/calendar.classic.date.css");
+		}
+		else if (width<=950) {
+			$("#calendarTypeStyle").attr("href", "/bitrix/templates/EN_MAIN/css/desktop/calendar.css");
+			$("#calendarVarStyle").attr("href", "/bitrix/templates/EN_MAIN/css/desktop/calendar.date.css");
+		}
+	}
+	$(function(){
+		chidomKalendar($(this).width());
+		$(window).resize(function(){
+			chidomKalendar($(this).width());
+		})
+	})
+
+/* -------------Vertikalne menyu (aga ekran az 580 dzulikde caved) -------------------- */
+	$("#menu-gathak").on("touchstart", function(){
+		if(winWidth <= 580) {
+			$("ul").animate({width: 'toggle'});
+		}
+	})
+/* ---------------------- Haaren bidalchid zapret ---------------------- */
+	$(window).resize(function(){
+		if(winWidth<480) {
+			$(".cities").attr("readonly", "readonly");
+		}
+	})
+})

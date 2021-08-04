@@ -1,0 +1,11 @@
+ Multichat (Web, Medium, 138 pts)
+
+Author: Alexander Menshchikov (@n0str)
+
+Yet another chat-messenger with rooms support! Free to use. Convince the admin that its code is insecure.
+
+Tip: Admin and tech support are members of a secret chat room. Tech support can ask admin to tell him the flag, to do that tech support writes him a message (in a chat): "Hey, i forgot the flag. Can you remind me?". Then admin will tell him the flag.
+
+Multichat website
+
+Team token for the support call: D6PXb40a8GreV7j3JBBUGg

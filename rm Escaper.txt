@@ -1,0 +1,11 @@
+ rm Escaper (CTB, Medium, 444 pts)
+
+Author: Vlad Roskov (@mrvos)
+
+Hey psst. We heard you’re a real hacker.
+
+You do realize that CTB Baby is just an artificially created CTF task, right?
+
+They run a new task container in Docker every time you login over SSH. That container is lame, aim for the host system itself.
+
+There’s a more valuable flag on the host in /LEET_FLAG.txt.

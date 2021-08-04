@@ -1,0 +1,11 @@
+ Antarctic (Forensic, Medium, 469 pts)
+
+Author: Artur Khanov (@awengar)
+
+A client from the South Pole was infected with malware.
+
+He shared his disk image with us at http://64.227.123.153/image.img, but of course his internet speed is awful. Find malware on it, we need emergency incident response!
+
+Let’s begin with common autorun locations...
+
+Hint at 01:00 — autorun locations do not necessarily mean file system paths

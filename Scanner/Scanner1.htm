@@ -1,0 +1,32 @@
+<html xmlns="http://www.w3.org/1999/html"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <title>
+        Scanner
+    </title>
+    <style>
+
+        * { font-family: 'Fira Code', 'PT Mono', 'Consolas', monospace; }
+        body { padding-top: 0.5em; }
+        body, input, button { font-size: 1.5rem; }
+
+    </style>
+</head>
+
+<body>
+
+<h1>What was scanned?</h1>
+<h2>Level #1</h2>
+
+<!--<video controls src="get_vid.php" width="500"></video>-->
+<img src="Scanner1_files/get_vid.gif" width="500">
+
+<br><br>
+
+<form action="check.php">
+    <label>Your answer:</label>
+    <br><input type="radio" name="answer" value="car" id="choice1"><label for="choice1">car</label><br><input type="radio" name="answer" value="house" id="choice2">house<label for="choice2"></label><br><input type="radio" name="answer" value="cat" id="choice3"><label for="choice3">cat</label><br><input type="radio" name="answer" value="squid" id="choice4"><label for="choice4">squid</label><br><br>    <button type="submit">Check</button>
+</form>
+
+
+
+</body></html>

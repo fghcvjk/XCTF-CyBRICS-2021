@@ -1,0 +1,377 @@
+#Booking {
+	position: relative;
+	width: 100%;
+	background-color: rgba(50,67,83,.7);
+	z-index: 600;
+	padding: 0px;
+	margin: 0px;
+	margin-top: -96px;
+	padding: 10px 15px 4px 15px;
+	text-align: center;
+	display: flex; 
+	-webkit-box-sizing: border-box; 
+	-moz-box-sizing: border-box;    
+	box-sizing: border-box;
+	justify-content: space-around;
+	flex-wrap: reverse-wrap;
+}
+.bookElementContainers {
+	position: relative;
+	display: flex;
+	vertical-align: top;
+}
+.bookElementContainers>p {
+	cursor: pointer;
+}
+.bookElementContainers:first-child {
+	margin-left: 0px;
+}
+.bookElementContainers:last-child {
+	margin-right: 0px;
+}
+#categorySelect {
+	display: inline-block;
+	width: 250px;
+}
+.bookingButtons {
+	display: block;
+	float: left;
+	padding: 8px 0px;
+	width: 115px;
+	text-align: center;
+	background-color: #E21E1F;
+	text-transform: capitalize;
+	text-decoration: none;
+	font-size: 12px;
+	color: #f8f8f8;
+	margin: 0px 18px 7px 0px;
+	border-radius: 2px;
+}
+.bookingButtons:last-child {
+	margin-right: 0px;
+}
+.bookingButtons:nth-child(2) {
+	margin-right: 0px;
+}
+.bookingButtons:hover {
+	background-color: transparent;
+	box-shadow: 0px 0px 1px 1px #fff inset;
+}
+.selectedBookingButtons {
+	background-color: transparent;
+	box-shadow: 0px 0px 1px 1px #fff inset;
+}
+#hotel:before {
+	content: "";
+	position: relative;
+	float: left;
+	left: 10px;
+	margin: auto;
+	display: block;
+	width: 20px;
+	height: 15px;
+	background: url(../../img/hotelico.png) no-repeat center;
+}
+#flight:before {
+	content: "";
+	position: relative;
+	float: left;
+	left: 10px;
+	margin: auto;
+	display: block;
+	width: 20px;
+	height: 15px;
+	background: url(../../img/flightico.png) no-repeat center;
+}
+#taxi:before {
+	content: "";
+	position: relative;
+	float: left;
+	left: 10px;
+	margin: auto;
+	display: block;
+	width: 20px;
+	height: 15px;
+	background: url(../../img/taxiico.png) no-repeat center;
+}
+#help {
+	background-color: transparent;
+	width: 100px;
+	padding-right: 0px;
+	box-sizing: border-box;
+}
+#help:hover {
+	box-shadow: none;
+}
+//#help:before {
+	content: "";
+	position: relative;
+	float: left;
+	margin: auto;
+	display: block;
+	width: 15px;
+	height: 15px;
+	background: url(../../img/helpico.png) no-repeat center;
+//}
+
+/* =-=-=-=-=-=-= Origin/Destination & Dates =-=-=-=-=-=- */
+#routeSelect {
+	position: relative;
+	flex-basis: 365px;
+	flex-grow: 2;
+	flex-shrink: 5;
+	flex-wrap: wrap;
+	margin: 0px 10px;
+	justify-content: space-around;
+	display: flex;
+}
+.bookInputBoxes {
+	position: relative;
+	flex: 0 0 45%;
+	align-self: flex-start;
+	min-width: 175px;
+}
+.bookInputBoxes>input {
+	position: relative;
+	padding: 7px 10px 7px 15px;
+	width: 100%;
+	box-sizing: border-box;
+	border-radius: 2px;
+	font-size: 14px;
+}
+#originBox>input {
+	background: url(../../img/departico.png) #fff;
+	background-size: 18px 14px;
+	background-repeat: no-repeat;
+	background-position: right center;
+	background-origin: content-box;
+}
+#destinationBox>input {
+	background: url(../../img/arriveico.png) #fff;
+	background-size: 18px 20px;
+	background-repeat: no-repeat;
+	background-position: right center;
+	background-origin: content-box;
+}
+#dateOfDepartureBox>input, #dateOfArrivalBox>input {
+	background: url(../../img/calendarico.png) #fff;
+	background-size: 16px 16px;
+	background-repeat: no-repeat;
+	background-position: right center;
+	background-origin: content-box;
+}
+/* =-=-=-=-=-=-=-=- Ctities =-=-=-=-=-=-=-=- */
+.bookInputBoxes>ul {
+	position: absolute;
+	bottom: 32px;
+	left: 0px;
+	width: 100%;
+	list-style-type: none;
+	border-radius: 2px;
+	max-height: 500px;
+	margin-bottom: 0px;
+	z-index: 1000;
+}
+.bookInputBoxes>ul>li {
+	display: none;
+	padding: 7px 15px;
+	text-transform: capitalize;
+	background-color: rgba(50,67,83,.95);
+	color: #fff;
+	text-align: left;
+	font-size: 13px;
+	border-bottom: 1px solid #395060;
+	cursor: pointer;
+	transition: 0s;
+}
+.bookInputBoxes>ul>li:hover {
+	background-color: #324353;
+	opacity: 1;
+	transition: 0s;
+}
+/*  -=-=-=-=-=-=- Search and final settings -=-=-=-=-=-=-  */
+#searchCriteriaSelect {
+	max-width: 136px;
+	flex-basis: 30px;
+	flex-grow: 1;
+	flex-shrink: 1;
+	flex-wrap: wrap;
+}
+#searchButton {
+	position: relative;
+	background-color: #E21E1F;
+	padding: 8px 70px 8px 15px;
+	align-self: flex-start;
+	color: #f8f8f8;
+	font-family: 12px;
+	text-decoration: none;
+	border-radius: 2px;
+}
+#searchButton:after {
+	content: "";
+	display: inline-block;
+	position: absolute;
+	right: 20px;
+	top: 11px;
+	width: 7px;
+	height: 7px;
+	border-top: 3px solid #fff;
+	border-right: 3px solid #fff;
+	transform: rotate(45deg);
+}
+#childrenSwitch {
+	border-radius: 2px;
+	overflow: hidden;
+	margin-left: 0px;
+}
+.switchBox {
+	position: relative;
+	display: inline-block;
+	width: 115px;
+	height: 25px;
+	background-color: #CEDDD9;
+	border: 3px solid #CEDDD9;
+	border-radius: 0px;
+	margin-left: -4px;
+	overflow: hidden;
+	cursor: pointer;
+}
+.switchBox:before {
+	content: "\2713";
+	position: absolute;
+	width: 50px;
+	height: 30px;
+	font-size: 10px;
+	font-weight: bold;
+	text-align: left;
+	top: 5px;
+	left: 10px;
+	color: green;
+}
+.switchBox:after {
+	content: "\2715";
+	position: absolute;
+	width: 50px;
+	height: 30px;
+	font-size: 10px;
+	text-align: right;
+	top: 5px;
+	right: 10px;
+	z-index: 0;
+	color: #3A505E;
+}
+.switchBox>input {
+	display: none;
+}
+.switchBox>.switch {
+	position: relative;
+	left: 4px;
+	top: 0px;
+	width: 60px; 
+	height: 25px;
+	background-color: #3A505E;
+	border-radius: 2px;
+	transition: .4s;
+	box-shadow: 0px 0px 2px 2px #222;
+	z-index: 1;
+}
+.switchBox>.switch:before {
+	content: "Children";
+	width: 50px;
+	position: absolute;
+	display: inline-block;
+	left: 5px;
+	top: 4px;
+	margin: 0px;
+	padding: 0px;
+	color: #fff;
+	font-size: 12px;
+}
+.switchBox>input:checked + .switch {
+	transform: translateX(47px);
+	background-color: #E21E1F;
+}
+.switchBox>input:checked .switchBox {
+	background-color: #fff !important;
+}
+/* =-=-=-=-=-=-=-=-=-=-=-=-=-Date calendars -=-=-=-=-=-=-=-=-=-=-=- */
+
+.picker__wrap
+{
+	font-family: Helvetica Neue,Helvetica,Arial,sans-serif;
+	font-size: 14px;
+}
+
+/*  =-=-=-=-=-=-=-=-=-=--=- Passengers number -=-=-=-=-=-=-=-=-=-=-  */
+.childrenContainer {
+	position: relative;
+	display: none;
+	width: 100%;
+	padding: 15px 10px;
+	background-color: rgba(50,67,83,1);
+	box-sizing: border-box;
+	transition: all 0s;
+}
+#childContent {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	flex-wrap: wrap;
+}
+.passengerGroups {
+	display: flex;
+	flex: 0 0 49%;
+	flex-wrap: nowrap;
+	justify-content: space-around;
+}
+.passengerBlocks {
+	display: inline-block;
+	border-radius: 2px;
+	overflow: hidden;
+	background-color: #fff;
+	align-self: flex-start;
+}
+.passengerBlocks>input {
+	display: inline-block;
+}
+.passengerBlocks>label {
+	display: inline-block;
+	font-size: 13px;
+	margin: 0px;
+	padding: 7px 5px 7px 10px;
+	color: #444;
+}
+.passengerBlocks>input[type="text"] {
+	padding: 7px 3px 7px 2px;
+	color: #fff;
+    text-shadow: 0px 0px 0px #000;
+    max-width: 13px;
+    -webkit-text-fill-color: transparent;
+    text-align: left;
+}
+.passengerBlocks>input[type="button"] {
+	height: 32px;
+	width: 30px;
+	color: red;
+	font-weight: bold;
+	font-family: tahoma;
+	float: right;
+	cursor: pointer;
+	border-radius: 0px;
+}
+.passengerBlocks>input[type="button"]:hover {
+	background-color: #E21E1F;
+	color: #fff;
+}
+#adultBlock {
+	flex: 0 0 200px;
+}
+#childBlock {
+	flex: 0 0 200px;
+}
+#infantBlock {
+	flex: 0 0 200px;
+}
+#infantBlockPlus {
+	flex: 0 0 200px;
+}

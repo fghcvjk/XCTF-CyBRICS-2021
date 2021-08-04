@@ -1,0 +1,128 @@
+#footer {
+	padding: 0px;
+	margin: 0px;
+	display: flex;
+	margin-top: 75px;
+	padding-top: 40px;
+	background-color: #2F3D46;
+	flex-flow: row wrap;
+	align-content: space-between;
+	min-height: 250px;
+}
+/*--------------------Content----------------*/
+.footerCol {
+	height: 200px;
+	margin: 0px auto;
+}
+/*--------------------Column 1---------------*/
+#col1m {
+	display: none;
+}
+#col1 {
+	display: flex;
+}
+#col1 td {
+	vertical-align: top;
+	padding-bottom: 5px;
+}
+#col1 td img {
+	width: 14px;
+	vertical-align: top;
+	margin: 2px 5px 0px 0px;
+}
+#col1 h4, #col1 h5 {
+	color: #DFEEEA;
+	font-weight: bold;
+	font-family: "Myriad Pro", Myriad, "Liberation Sans", "Nimbus Sans L", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	letter-spacing: .5px;
+}
+#col1 td p {
+	color: #DFEEEA;
+	font-size: 14px;
+	font-family: "Myriad Pro", Myriad, "Liberation Sans", "Nimbus Sans L", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	letter-spacing: .5px;
+}
+#col1 td a {
+	color: #DFEEEA;
+	font-size: 14px;
+	letter-spacing: .5px;
+}
+/*--------------------Column 2---------------*/
+#col2 {
+	display: flex;
+	flex-flow: row wrap;
+	flex-basis: 400px;
+	align-content: center;
+	border-top: 1px solid #555;
+}
+#col2 ul {
+	display: block;
+	margin: 0px auto;
+	list-style-type: none;
+}
+#col2 ul li {
+
+}
+#col2 ul li a {
+	font-family: "Myriad Pro", Myriad, "Liberation Sans", "Nimbus Sans L", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size: 12px;
+	color: #DFEEEA;
+	text-decoration: none;
+}
+/*--------------------Column 3----------------*/
+#col3 form {
+	margin-bottom: 20px;
+}
+#col3 h4 {
+	color: #DFEEEA;
+	font-weight: bold;
+	font-family: "Myriad Pro", Myriad, "Liberation Sans", "Nimbus Sans L", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	letter-spacing: .5px;
+	margin-bottom: 15px;
+}
+#col3 #subscribeInput {
+	vertical-align: bottom;
+	border-radius: 2px;
+	border-bottom: 1px solid grey;
+	box-sizing: border-box;
+	background-color: rgba(0,0,0,0);
+	color: #fff;
+}
+#col3 #subscribeButton {
+	vertical-align: bottom;
+	display: inline-block;
+	padding: 7px 20px;
+	color: #DFEEEA;
+	font-weight: bold;
+	background-color: red;
+	cursor: pointer;
+}
+#col3 ul {
+	list-style-type: none;
+	margin-top: -5px;
+}
+#col3>ul:first-child {
+	text-align: right;
+}
+#col3 ul li {
+	display: inline-block;
+	margin-right: 5px;
+}
+#col3 small {
+	align-self: flex-end;
+}
+/*---------------------Socket-----------------*/
+#socket {
+	background-color: #2F3D46;
+	width: 100%;
+	display: flex;
+	align-content: center;
+}
+#socket>small {
+	display: inline-block;
+	color: #fff;
+	padding: 40px 0px;
+	flex-grow: 1;
+	text-align: center;
+	font-size: 10px;
+}
